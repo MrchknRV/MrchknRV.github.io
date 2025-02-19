@@ -1,6 +1,7 @@
 @media (max-width: 767px) {
     .center {
-        padding: 0 16px;
+        padding-right: 16px;
+        padding-left: 16px;
     }
 
     .header {
@@ -176,8 +177,8 @@
     }
 
     .link {
-        margin-top: 37px;
-        margin-bottom: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 
     .footer {
@@ -194,23 +195,23 @@
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
     .basket__input {
         display: none;
     }
 
     .filtering {
-        right: 55px;
+        right: 65px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px){
     .content__title {
         font-size: 42px;
     }
 
     .footer {
-        &__content {
+        &__content{
             gap: 40px;
         }
     }

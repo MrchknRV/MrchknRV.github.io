@@ -534,32 +534,20 @@ a:hover {
   z-index: 1;
   top: calc(60% + 14px);
   right: 200px;
-  display: flex;
-  flex-direction: column;
   align-items: start;
-  gap: 36px;
   background-color: #fff;
   padding: 40px 48px;
   box-shadow: 0px 4px 67px 12px rgba(0, 0, 0, 0.32);
-  width: 542px;
-  height: 548px;
 }
-
 .filtering__content {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2, 1fr);
   align-content: start;
   gap: 32px 65px;
 }
-
 .filtering__content-fildset {
   display: grid;
   gap: 32px;
-}
-
-.filtering__content-type {
-  display: grid;
-  padding-left: auto;
 }
 
 .fieldset {
@@ -569,7 +557,6 @@ a:hover {
   padding: 0;
   border: none;
 }
-
 .fieldset__legend {
   font-size: 16px;
   line-height: 20px;
@@ -601,7 +588,9 @@ a:hover {
 }
 
 .filtering__button {
-  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 36px;
 }
 
 .radio {
@@ -609,11 +598,9 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
-
 .radio__input {
   display: none;
 }
-
 .radio__label {
   display: flex;
   align-items: center;
@@ -623,7 +610,6 @@ a:hover {
   font-size: 14px;
   line-height: 17px;
 }
-
 .radio__label::before {
   content: "";
   width: 14px;
@@ -727,11 +713,9 @@ a:hover {
   align-items: center;
   gap: 10px;
 }
-
 .checkbox__input {
   display: none;
 }
-
 .checkbox__label {
   display: flex;
   align-items: center;
@@ -741,7 +725,6 @@ a:hover {
   font-size: 14px;
   font-weight: 400;
 }
-
 .checkbox__label::before {
   content: "";
   display: inline-block;
@@ -752,82 +735,68 @@ a:hover {
   left: 0;
   background-color: #fff;
 }
+.checkbox__label-white::before {
+  background-color: #fff;
+  border-color: #888888;
+}
+.checkbox__label-black::before {
+  background-color: #000;
+  border-color: #000;
+}
+.checkbox__label-gray::before {
+  background-color: #737373;
+  border-color: #737373;
+}
+.checkbox__label-red::before {
+  background-color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+.checkbox__label-lightgreen::before {
+  background-color: rgb(0, 191, 42);
+  border-color: rgb(0, 191, 42);
+}
+.checkbox__label-orange::before {
+  background-color: rgb(255, 122, 65);
+  border-color: rgb(255, 122, 65);
+}
+.checkbox__label-yellow::before {
+  background-color: rgb(242, 203, 1);
+  border-color: rgb(242, 203, 1);
+}
+.checkbox__label-green::before {
+  background-color: rgb(28, 204, 151);
+  border-color: rgb(28, 204, 151);
+}
+.checkbox__label-azure::before {
+  background-color: rgb(0, 159, 227);
+  border-color: rgb(0, 159, 227);
+}
+.checkbox__label-blue::before {
+  background-color: rgb(0, 10, 248);
+  border-color: rgb(0, 10, 248);
+}
+.checkbox__label-violet::before {
+  background-color: rgb(103, 16, 214);
+  border-color: rgb(103, 16, 214);
+}
+.checkbox__label-lilac::before {
+  background-color: rgb(157, 13, 181);
+  border-color: rgb(157, 13, 181);
+}
+.checkbox__label-lavender::before {
+  background-color: rgb(216, 154, 255);
+  border-color: rgb(216, 154, 255);
+}
+.checkbox__label-pink::before {
+  background-color: rgb(255, 101, 166);
+  border-color: rgb(255, 101, 166);
+}
 
 .checkbox__input:checked + .checkbox__label::before {
   background-image: url(images/Vector1.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-color: #000;
-}
-
-.checkbox__label-white::before {
-  background-color: #fff;
-  border-color: #888888;
-}
-
-.checkbox__label-black::before {
-  background-color: #000;
-  border-color: #000;
-}
-
-.checkbox__label-gray::before {
-  background-color: #737373;
-  border-color: #737373;
-}
-
-.checkbox__label-red::before {
-  background-color: rgb(255, 0, 0);
-  border-color: rgb(255, 0, 0);
-}
-
-.checkbox__label-lightgreen::before {
-  background-color: rgb(0, 191, 42);
-  border-color: rgb(0, 191, 42);
-}
-
-.checkbox__label-orange::before {
-  background-color: rgb(255, 122, 65);
-  border-color: rgb(255, 122, 65);
-}
-
-.checkbox__label-yellow::before {
-  background-color: rgb(242, 203, 1);
-  border-color: rgb(242, 203, 1);
-}
-
-.checkbox__label-green::before {
-  background-color: rgb(28, 204, 151);
-  border-color: rgb(28, 204, 151);
-}
-
-.checkbox__label-azure::before {
-  background-color: rgb(0, 159, 227);
-  border-color: rgb(0, 159, 227);
-}
-
-.checkbox__label-blue::before {
-  background-color: rgb(0, 10, 248);
-  border-color: rgb(0, 10, 248);
-}
-
-.checkbox__label-violet::before {
-  background-color: rgb(103, 16, 214);
-  border-color: rgb(103, 16, 214);
-}
-
-.checkbox__label-lilac::before {
-  background-color: rgb(157, 13, 181);
-  border-color: rgb(157, 13, 181);
-}
-
-.checkbox__label-lavender::before {
-  background-color: rgb(216, 154, 255);
-  border-color: rgb(216, 154, 255);
-}
-
-.checkbox__label-pink::before {
-  background-color: rgb(255, 101, 166);
-  border-color: rgb(255, 101, 166);
 }
 
 .checkbox__input:checked + .checkbox__label-black::before,
@@ -1091,7 +1060,8 @@ a:hover {
 }
 @media (max-width: 767px) {
   .center {
-    padding: 0 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
   .header {
     border-bottom: none;
@@ -1226,8 +1196,8 @@ a:hover {
     grid-column: 1/9;
   }
   .link {
-    margin-top: 37px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .footer {
     padding-top: 33px;
@@ -1239,12 +1209,12 @@ a:hover {
     width: 345px;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   .basket__input {
     display: none;
   }
   .filtering {
-    right: 55px;
+    right: 65px;
   }
 }
 @media (max-width: 320px) {
